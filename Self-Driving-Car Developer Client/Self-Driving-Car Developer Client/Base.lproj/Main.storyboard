@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Self_Driving_Car_Developer_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k43-uy-JHu">
+                                <rect key="frame" x="418.5" y="343" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="onConnectButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1o-pV-pBJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OwM-ky-WLq">
+                                <rect key="frame" x="56" y="12" width="256" height="192"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="OMb-o3-WLK"/>
+                                    <constraint firstAttribute="width" constant="256" id="gNk-u3-bXb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-Su-Xdc">
+                                <rect key="frame" x="320" y="12" width="256" height="192"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="ZfF-E1-edF"/>
+                                    <constraint firstAttribute="height" constant="192" id="mFl-KS-jFs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-Mx-3G9">
+                                <rect key="frame" x="584" y="12" width="256" height="192"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="3X9-Zu-0i6"/>
+                                    <constraint firstAttribute="height" constant="192" id="Eah-Ob-oWX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OwM-ky-WLq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="4Ff-Hu-tCP"/>
+                            <constraint firstItem="k43-uy-JHu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BIn-g6-dim"/>
+                            <constraint firstItem="OA7-Mx-3G9" firstAttribute="leading" secondItem="3vp-Su-Xdc" secondAttribute="trailing" constant="8" id="Pff-J4-nBZ"/>
+                            <constraint firstItem="3vp-Su-Xdc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Zf7-E8-2zW"/>
+                            <constraint firstItem="3vp-Su-Xdc" firstAttribute="leading" secondItem="OwM-ky-WLq" secondAttribute="trailing" constant="8" id="b9L-WB-isJ"/>
+                            <constraint firstItem="3vp-Su-Xdc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ed9-AL-HkS"/>
+                            <constraint firstItem="OA7-Mx-3G9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="kHe-hK-vYu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k43-uy-JHu" secondAttribute="bottom" constant="20" id="qwZ-tF-Msn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="rgbImgView" destination="3vp-Su-Xdc" id="kvi-DF-OiU"/>
+                        <outlet property="rgbImgView2" destination="OwM-ky-WLq" id="CAv-GN-Yvw"/>
+                        <outlet property="rgbImgView3" destination="OA7-Mx-3G9" id="zo0-WE-g7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
