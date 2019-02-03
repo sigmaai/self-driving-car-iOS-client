@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B55F220780FE00A3DE94 /* ImageMessage.swift */; };
+		0045B5622207811900A3DE94 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5612207811900A3DE94 /* art.scnassets */; };
+		0045B5642207847600A3DE94 /* go_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5632207847600A3DE94 /* go_large.png */; };
+		0045B5662207857C00A3DE94 /* TestValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B5652207857C00A3DE94 /* TestValues.swift */; };
+		0045B5692207873400A3DE94 /* SteeringPathMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B5682207873400A3DE94 /* SteeringPathMessage.swift */; };
+		00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB964220672BC0028CD3D /* RBSMessage.swift */; };
+		00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */; };
+		00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB967220672BC0028CD3D /* PoseMessage.swift */; };
+		00AFB987220672BD0028CD3D /* MultiArrayLayoutMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB969220672BC0028CD3D /* MultiArrayLayoutMessage.swift */; };
+		00AFB988220672BD0028CD3D /* HeaderMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96A220672BC0028CD3D /* HeaderMessage.swift */; };
+		00AFB989220672BD0028CD3D /* CharMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96B220672BC0028CD3D /* CharMessage.swift */; };
+		00AFB98A220672BD0028CD3D /* BoolMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96C220672BD0028CD3D /* BoolMessage.swift */; };
+		00AFB98B220672BD0028CD3D /* MultiArrayDimensionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96D220672BD0028CD3D /* MultiArrayDimensionMessage.swift */; };
+		00AFB98C220672BD0028CD3D /* ByteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96E220672BD0028CD3D /* ByteMessage.swift */; };
+		00AFB98D220672BD0028CD3D /* ByteMultiArrayMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB96F220672BD0028CD3D /* ByteMultiArrayMessage.swift */; };
+		00AFB98E220672BD0028CD3D /* StringMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB970220672BD0028CD3D /* StringMessage.swift */; };
+		00AFB98F220672BD0028CD3D /* Float32Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB971220672BD0028CD3D /* Float32Message.swift */; };
+		00AFB990220672BD0028CD3D /* TImeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB972220672BD0028CD3D /* TImeMessage.swift */; };
+		00AFB991220672BD0028CD3D /* Int32Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB973220672BD0028CD3D /* Int32Message.swift */; };
+		00AFB992220672BD0028CD3D /* TwistStampedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB975220672BD0028CD3D /* TwistStampedMessage.swift */; };
+		00AFB993220672BD0028CD3D /* WrenchMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB976220672BD0028CD3D /* WrenchMessage.swift */; };
+		00AFB994220672BD0028CD3D /* Vector3Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB977220672BD0028CD3D /* Vector3Message.swift */; };
+		00AFB995220672BD0028CD3D /* TwistMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB978220672BD0028CD3D /* TwistMessage.swift */; };
+		00AFB996220672BD0028CD3D /* PointMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB979220672BD0028CD3D /* PointMessage.swift */; };
+		00AFB997220672BD0028CD3D /* EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB97B220672BD0028CD3D /* EmptyMessage.swift */; };
+		00AFB998220672BD0028CD3D /* RBSPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB97C220672BD0028CD3D /* RBSPublisher.swift */; };
+		00AFB999220672BD0028CD3D /* RBSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB97D220672BD0028CD3D /* RBSManager.swift */; };
+		00AFB99B220672BD0028CD3D /* RBSSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB97F220672BD0028CD3D /* RBSSubscriber.swift */; };
+		00AFB99C220672BD0028CD3D /* RBSMessageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB980220672BD0028CD3D /* RBSMessageContainer.swift */; };
+		00AFB99D220672BD0028CD3D /* RBSServiceCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB981220672BD0028CD3D /* RBSServiceCall.swift */; };
+		00C30A0922067659008BEAC0 /* Assets1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C30A0822067659008BEAC0 /* Assets1.xcassets */; };
+		00F765762206724D002B5485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F765752206724D002B5485 /* AppDelegate.swift */; };
+		00F765782206724D002B5485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F765772206724D002B5485 /* ViewController.swift */; };
+		00F7657B2206724D002B5485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F765792206724D002B5485 /* Main.storyboard */; };
+		00F765802206724D002B5485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F7657E2206724D002B5485 /* LaunchScreen.storyboard */; };
+		10589FAA05C1BFA2DC36F824 /* Pods_Self_Driving_Car_User_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B23C0CCBE8C2C4453608FC /* Pods_Self_Driving_Car_User_Client.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0045B55F220780FE00A3DE94 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		0045B5612207811900A3DE94 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		0045B5632207847600A3DE94 /* go_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_large.png; sourceTree = "<group>"; };
+		0045B5652207857C00A3DE94 /* TestValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestValues.swift; sourceTree = "<group>"; };
+		0045B5682207873400A3DE94 /* SteeringPathMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteeringPathMessage.swift; sourceTree = "<group>"; };
+		00AFB964220672BC0028CD3D /* RBSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessage.swift; sourceTree = "<group>"; };
+		00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportAbsoluteMessage.swift; sourceTree = "<group>"; };
+		00AFB967220672BC0028CD3D /* PoseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseMessage.swift; sourceTree = "<group>"; };
+		00AFB969220672BC0028CD3D /* MultiArrayLayoutMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArrayLayoutMessage.swift; sourceTree = "<group>"; };
+		00AFB96A220672BC0028CD3D /* HeaderMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderMessage.swift; sourceTree = "<group>"; };
+		00AFB96B220672BC0028CD3D /* CharMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharMessage.swift; sourceTree = "<group>"; };
+		00AFB96C220672BD0028CD3D /* BoolMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolMessage.swift; sourceTree = "<group>"; };
+		00AFB96D220672BD0028CD3D /* MultiArrayDimensionMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArrayDimensionMessage.swift; sourceTree = "<group>"; };
+		00AFB96E220672BD0028CD3D /* ByteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteMessage.swift; sourceTree = "<group>"; };
+		00AFB96F220672BD0028CD3D /* ByteMultiArrayMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteMultiArrayMessage.swift; sourceTree = "<group>"; };
+		00AFB970220672BD0028CD3D /* StringMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMessage.swift; sourceTree = "<group>"; };
+		00AFB971220672BD0028CD3D /* Float32Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float32Message.swift; sourceTree = "<group>"; };
+		00AFB972220672BD0028CD3D /* TImeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TImeMessage.swift; sourceTree = "<group>"; };
+		00AFB973220672BD0028CD3D /* Int32Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int32Message.swift; sourceTree = "<group>"; };
+		00AFB975220672BD0028CD3D /* TwistStampedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwistStampedMessage.swift; sourceTree = "<group>"; };
+		00AFB976220672BD0028CD3D /* WrenchMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrenchMessage.swift; sourceTree = "<group>"; };
+		00AFB977220672BD0028CD3D /* Vector3Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3Message.swift; sourceTree = "<group>"; };
+		00AFB978220672BD0028CD3D /* TwistMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwistMessage.swift; sourceTree = "<group>"; };
+		00AFB979220672BD0028CD3D /* PointMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointMessage.swift; sourceTree = "<group>"; };
+		00AFB97B220672BD0028CD3D /* EmptyMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyMessage.swift; sourceTree = "<group>"; };
+		00AFB97C220672BD0028CD3D /* RBSPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSPublisher.swift; sourceTree = "<group>"; };
+		00AFB97D220672BD0028CD3D /* RBSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSManager.swift; sourceTree = "<group>"; };
+		00AFB97F220672BD0028CD3D /* RBSSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSSubscriber.swift; sourceTree = "<group>"; };
+		00AFB980220672BD0028CD3D /* RBSMessageContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessageContainer.swift; sourceTree = "<group>"; };
+		00AFB981220672BD0028CD3D /* RBSServiceCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSServiceCall.swift; sourceTree = "<group>"; };
+		00C30A0822067659008BEAC0 /* Assets1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets1.xcassets; sourceTree = "<group>"; };
+		00F765722206724D002B5485 /* Self-Driving Car User Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Self-Driving Car User Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00F765752206724D002B5485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00F765772206724D002B5485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00F7657A2206724D002B5485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00F7657F2206724D002B5485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00F765812206724D002B5485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C6BA533B60735634179B305 /* Pods-Self-Driving Car User Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Self-Driving Car User Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Self-Driving Car User Client/Pods-Self-Driving Car User Client.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF5CCED532A2C649E102A57 /* Pods-Self-Driving Car User Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Self-Driving Car User Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Self-Driving Car User Client/Pods-Self-Driving Car User Client.release.xcconfig"; sourceTree = "<group>"; };
+		B8B23C0CCBE8C2C4453608FC /* Pods_Self_Driving_Car_User_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Self_Driving_Car_User_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00F7656F2206724D002B5485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10589FAA05C1BFA2DC36F824 /* Pods_Self_Driving_Car_User_Client.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0045B55E220780FE00A3DE94 /* sensor_msgs */ = {
+			isa = PBXGroup;
+			children = (
+				0045B55F220780FE00A3DE94 /* ImageMessage.swift */,
+			);
+			path = sensor_msgs;
+			sourceTree = "<group>";
+		};
+		0045B5672207871700A3DE94 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				0045B5682207873400A3DE94 /* SteeringPathMessage.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		00AFB961220672BC0028CD3D /* RBSManager */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB962220672BC0028CD3D /* Classes */,
+			);
+			path = RBSManager;
+			sourceTree = "<group>";
+		};
+		00AFB962220672BC0028CD3D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB963220672BC0028CD3D /* Messages */,
+				00AFB97C220672BD0028CD3D /* RBSPublisher.swift */,
+				00AFB97D220672BD0028CD3D /* RBSManager.swift */,
+				00AFB97F220672BD0028CD3D /* RBSSubscriber.swift */,
+				00AFB980220672BD0028CD3D /* RBSMessageContainer.swift */,
+				00AFB981220672BD0028CD3D /* RBSServiceCall.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		00AFB963220672BC0028CD3D /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB964220672BC0028CD3D /* RBSMessage.swift */,
+				0045B5672207871700A3DE94 /* Others */,
+				0045B55E220780FE00A3DE94 /* sensor_msgs */,
+				00AFB965220672BC0028CD3D /* Turtlesim */,
+				00AFB968220672BC0028CD3D /* Standard */,
+				00AFB974220672BD0028CD3D /* Geometry */,
+				00AFB97A220672BD0028CD3D /* StdSrvs */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		00AFB965220672BC0028CD3D /* Turtlesim */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */,
+				00AFB967220672BC0028CD3D /* PoseMessage.swift */,
+			);
+			path = Turtlesim;
+			sourceTree = "<group>";
+		};
+		00AFB968220672BC0028CD3D /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB969220672BC0028CD3D /* MultiArrayLayoutMessage.swift */,
+				00AFB96A220672BC0028CD3D /* HeaderMessage.swift */,
+				00AFB96B220672BC0028CD3D /* CharMessage.swift */,
+				00AFB96C220672BD0028CD3D /* BoolMessage.swift */,
+				00AFB96D220672BD0028CD3D /* MultiArrayDimensionMessage.swift */,
+				00AFB96E220672BD0028CD3D /* ByteMessage.swift */,
+				00AFB96F220672BD0028CD3D /* ByteMultiArrayMessage.swift */,
+				00AFB970220672BD0028CD3D /* StringMessage.swift */,
+				00AFB971220672BD0028CD3D /* Float32Message.swift */,
+				00AFB972220672BD0028CD3D /* TImeMessage.swift */,
+				00AFB973220672BD0028CD3D /* Int32Message.swift */,
+			);
+			path = Standard;
+			sourceTree = "<group>";
+		};
+		00AFB974220672BD0028CD3D /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB975220672BD0028CD3D /* TwistStampedMessage.swift */,
+				00AFB976220672BD0028CD3D /* WrenchMessage.swift */,
+				00AFB977220672BD0028CD3D /* Vector3Message.swift */,
+				00AFB978220672BD0028CD3D /* TwistMessage.swift */,
+				00AFB979220672BD0028CD3D /* PointMessage.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		00AFB97A220672BD0028CD3D /* StdSrvs */ = {
+			isa = PBXGroup;
+			children = (
+				00AFB97B220672BD0028CD3D /* EmptyMessage.swift */,
+			);
+			path = StdSrvs;
+			sourceTree = "<group>";
+		};
+		00F765692206724D002B5485 = {
+			isa = PBXGroup;
+			children = (
+				00F765742206724D002B5485 /* Self-Driving Car User Client */,
+				00F765732206724D002B5485 /* Products */,
+				211AD8D7460AFA6478603B48 /* Pods */,
+				C0D16957DBFF8C6D35836D1E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		00F765732206724D002B5485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00F765722206724D002B5485 /* Self-Driving Car User Client.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00F765742206724D002B5485 /* Self-Driving Car User Client */ = {
+			isa = PBXGroup;
+			children = (
+				0045B5612207811900A3DE94 /* art.scnassets */,
+				00AFB961220672BC0028CD3D /* RBSManager */,
+				00F765752206724D002B5485 /* AppDelegate.swift */,
+				00F765772206724D002B5485 /* ViewController.swift */,
+				0045B5652207857C00A3DE94 /* TestValues.swift */,
+				00C30A0822067659008BEAC0 /* Assets1.xcassets */,
+				0045B5632207847600A3DE94 /* go_large.png */,
+				00F765792206724D002B5485 /* Main.storyboard */,
+				00F7657E2206724D002B5485 /* LaunchScreen.storyboard */,
+				00F765812206724D002B5485 /* Info.plist */,
+			);
+			path = "Self-Driving Car User Client";
+			sourceTree = "<group>";
+		};
+		211AD8D7460AFA6478603B48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C6BA533B60735634179B305 /* Pods-Self-Driving Car User Client.debug.xcconfig */,
+				5FF5CCED532A2C649E102A57 /* Pods-Self-Driving Car User Client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0D16957DBFF8C6D35836D1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8B23C0CCBE8C2C4453608FC /* Pods_Self_Driving_Car_User_Client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00F765712206724D002B5485 /* Self-Driving Car User Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00F7659A2206724D002B5485 /* Build configuration list for PBXNativeTarget "Self-Driving Car User Client" */;
+			buildPhases = (
+				DBA92F9CD612F4E9026CF485 /* [CP] Check Pods Manifest.lock */,
+				00F7656E2206724D002B5485 /* Sources */,
+				00F7656F2206724D002B5485 /* Frameworks */,
+				00F765702206724D002B5485 /* Resources */,
+				41178E20A987FA12508881B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Self-Driving Car User Client";
+			productName = "Self-Driving Car User Client";
+			productReference = 00F765722206724D002B5485 /* Self-Driving Car User Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00F7656A2206724D002B5485 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Yongyang Nie";
+				TargetAttributes = {
+					00F765712206724D002B5485 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 00F7656D2206724D002B5485 /* Build configuration list for PBXProject "Self-Driving Car User Client" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00F765692206724D002B5485;
+			productRefGroup = 00F765732206724D002B5485 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00F765712206724D002B5485 /* Self-Driving Car User Client */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00F765702206724D002B5485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F765802206724D002B5485 /* LaunchScreen.storyboard in Resources */,
+				0045B5622207811900A3DE94 /* art.scnassets in Resources */,
+				0045B5642207847600A3DE94 /* go_large.png in Resources */,
+				00C30A0922067659008BEAC0 /* Assets1.xcassets in Resources */,
+				00F7657B2206724D002B5485 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41178E20A987FA12508881B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Self-Driving Car User Client/Pods-Self-Driving Car User Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Self-Driving Car User Client/Pods-Self-Driving Car User Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA92F9CD612F4E9026CF485 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Self-Driving Car User Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00F7656E2206724D002B5485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00AFB99B220672BD0028CD3D /* RBSSubscriber.swift in Sources */,
+				0045B5692207873400A3DE94 /* SteeringPathMessage.swift in Sources */,
+				00AFB998220672BD0028CD3D /* RBSPublisher.swift in Sources */,
+				00AFB993220672BD0028CD3D /* WrenchMessage.swift in Sources */,
+				00AFB98C220672BD0028CD3D /* ByteMessage.swift in Sources */,
+				00AFB98F220672BD0028CD3D /* Float32Message.swift in Sources */,
+				00AFB991220672BD0028CD3D /* Int32Message.swift in Sources */,
+				00AFB994220672BD0028CD3D /* Vector3Message.swift in Sources */,
+				0045B5662207857C00A3DE94 /* TestValues.swift in Sources */,
+				00AFB995220672BD0028CD3D /* TwistMessage.swift in Sources */,
+				00F765782206724D002B5485 /* ViewController.swift in Sources */,
+				00AFB988220672BD0028CD3D /* HeaderMessage.swift in Sources */,
+				00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */,
+				00F765762206724D002B5485 /* AppDelegate.swift in Sources */,
+				00AFB996220672BD0028CD3D /* PointMessage.swift in Sources */,
+				00AFB98E220672BD0028CD3D /* StringMessage.swift in Sources */,
+				00AFB999220672BD0028CD3D /* RBSManager.swift in Sources */,
+				00AFB99C220672BD0028CD3D /* RBSMessageContainer.swift in Sources */,
+				00AFB99D220672BD0028CD3D /* RBSServiceCall.swift in Sources */,
+				0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */,
+				00AFB990220672BD0028CD3D /* TImeMessage.swift in Sources */,
+				00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */,
+				00AFB98A220672BD0028CD3D /* BoolMessage.swift in Sources */,
+				00AFB98B220672BD0028CD3D /* MultiArrayDimensionMessage.swift in Sources */,
+				00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */,
+				00AFB992220672BD0028CD3D /* TwistStampedMessage.swift in Sources */,
+				00AFB98D220672BD0028CD3D /* ByteMultiArrayMessage.swift in Sources */,
+				00AFB987220672BD0028CD3D /* MultiArrayLayoutMessage.swift in Sources */,
+				00AFB989220672BD0028CD3D /* CharMessage.swift in Sources */,
+				00AFB997220672BD0028CD3D /* EmptyMessage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00F765792206724D002B5485 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00F7657A2206724D002B5485 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00F7657E2206724D002B5485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00F7657F2206724D002B5485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00F765982206724D002B5485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00F765992206724D002B5485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00F7659B2206724D002B5485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6BA533B60735634179B305 /* Pods-Self-Driving Car User Client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC4C987ET6;
+				INFOPLIST_FILE = "Self-Driving Car User Client/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Self-Driving-Car-User-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00F7659C2206724D002B5485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF5CCED532A2C649E102A57 /* Pods-Self-Driving Car User Client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YC4C987ET6;
+				INFOPLIST_FILE = "Self-Driving Car User Client/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Self-Driving-Car-User-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00F7656D2206724D002B5485 /* Build configuration list for PBXProject "Self-Driving Car User Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F765982206724D002B5485 /* Debug */,
+				00F765992206724D002B5485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00F7659A2206724D002B5485 /* Build configuration list for PBXNativeTarget "Self-Driving Car User Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F7659B2206724D002B5485 /* Debug */,
+				00F7659C2206724D002B5485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00F7656A2206724D002B5485 /* Project object */;
+}
