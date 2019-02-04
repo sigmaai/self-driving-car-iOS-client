@@ -1,5 +1,5 @@
 //
-//  SteeringPathMessage.swift
+//  Float32MultiArray.swift
 //  Self-Driving Car User Client
 //
 //  Created by Yongyang Nie on 2/3/19.
@@ -9,16 +9,14 @@
 import UIKit
 import ObjectMapper
 
-public class SteeringPathMessage: RBSMessage {
+public class Float32MultiArrayMessage: RBSMessage {
     
-    public var header: HeaderMessage?
-    public var angle_value = Float()
-    public var path_x = [Float]()
-    public var path_y = [Float]()
+    public var layout: MultiArrayLayoutMessage?
+    public var data = [Float32]()
     
     public override init() {
         super.init()
-        header = HeaderMessage()
+        layout = MultiArrayLayoutMessage()
     }
     
     public required init?(map: Map) {
@@ -26,8 +24,8 @@ public class SteeringPathMessage: RBSMessage {
     }
     
     override public func mapping(map: Map) {
-        header <- map["header"]
-        path_x <- map["path_x"]
-        path_y <- map["path_y"]
+        layout <- map["layout"]
+        data <- map["data"]
     }
 }
+

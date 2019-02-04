@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00110A7F2207BE9C00976B18 /* Float32MultiArrayMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */; };
 		0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B55F220780FE00A3DE94 /* ImageMessage.swift */; };
 		0045B5622207811900A3DE94 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5612207811900A3DE94 /* art.scnassets */; };
 		0045B5642207847600A3DE94 /* go_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5632207847600A3DE94 /* go_large.png */; };
 		0045B5662207857C00A3DE94 /* TestValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B5652207857C00A3DE94 /* TestValues.swift */; };
-		0045B5692207873400A3DE94 /* SteeringPathMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B5682207873400A3DE94 /* SteeringPathMessage.swift */; };
 		00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB964220672BC0028CD3D /* RBSMessage.swift */; };
 		00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */; };
 		00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB967220672BC0028CD3D /* PoseMessage.swift */; };
@@ -46,11 +46,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float32MultiArrayMessage.swift; sourceTree = "<group>"; };
 		0045B55F220780FE00A3DE94 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		0045B5612207811900A3DE94 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		0045B5632207847600A3DE94 /* go_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_large.png; sourceTree = "<group>"; };
 		0045B5652207857C00A3DE94 /* TestValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestValues.swift; sourceTree = "<group>"; };
-		0045B5682207873400A3DE94 /* SteeringPathMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteeringPathMessage.swift; sourceTree = "<group>"; };
 		00AFB964220672BC0028CD3D /* RBSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessage.swift; sourceTree = "<group>"; };
 		00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportAbsoluteMessage.swift; sourceTree = "<group>"; };
 		00AFB967220672BC0028CD3D /* PoseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseMessage.swift; sourceTree = "<group>"; };
@@ -108,14 +108,6 @@
 			path = sensor_msgs;
 			sourceTree = "<group>";
 		};
-		0045B5672207871700A3DE94 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				0045B5682207873400A3DE94 /* SteeringPathMessage.swift */,
-			);
-			path = Others;
-			sourceTree = "<group>";
-		};
 		00AFB961220672BC0028CD3D /* RBSManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				00AFB964220672BC0028CD3D /* RBSMessage.swift */,
-				0045B5672207871700A3DE94 /* Others */,
 				0045B55E220780FE00A3DE94 /* sensor_msgs */,
 				00AFB965220672BC0028CD3D /* Turtlesim */,
 				00AFB968220672BC0028CD3D /* Standard */,
@@ -174,6 +165,7 @@
 				00AFB971220672BD0028CD3D /* Float32Message.swift */,
 				00AFB972220672BD0028CD3D /* TImeMessage.swift */,
 				00AFB973220672BD0028CD3D /* Int32Message.swift */,
+				00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */,
 			);
 			path = Standard;
 			sourceTree = "<group>";
@@ -367,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00AFB99B220672BD0028CD3D /* RBSSubscriber.swift in Sources */,
-				0045B5692207873400A3DE94 /* SteeringPathMessage.swift in Sources */,
 				00AFB998220672BD0028CD3D /* RBSPublisher.swift in Sources */,
 				00AFB993220672BD0028CD3D /* WrenchMessage.swift in Sources */,
 				00AFB98C220672BD0028CD3D /* ByteMessage.swift in Sources */,
@@ -380,6 +371,7 @@
 				00AFB988220672BD0028CD3D /* HeaderMessage.swift in Sources */,
 				00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */,
 				00F765762206724D002B5485 /* AppDelegate.swift in Sources */,
+				00110A7F2207BE9C00976B18 /* Float32MultiArrayMessage.swift in Sources */,
 				00AFB996220672BD0028CD3D /* PointMessage.swift in Sources */,
 				00AFB98E220672BD0028CD3D /* StringMessage.swift in Sources */,
 				00AFB999220672BD0028CD3D /* RBSManager.swift in Sources */,

@@ -37,13 +37,16 @@
                                             <state key="normal" title="Connect">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="connectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcY-D3-BV4"/>
+                                            </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip8-Zm-GIQ">
-                                            <rect key="frame" x="8" y="8" width="200" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip8-Zm-GIQ">
+                                            <rect key="frame" x="8" y="8" width="200" height="19.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="4bz-gM-RQI"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -85,7 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="connectButton" destination="MyX-2V-Ide" id="l92-rC-cac"/>
                         <outlet property="sceneView" destination="rWh-TZ-dq0" id="SVO-Ue-gjP"/>
+                        <outlet property="statusLabel" destination="Ip8-Zm-GIQ" id="2zm-U8-cyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
