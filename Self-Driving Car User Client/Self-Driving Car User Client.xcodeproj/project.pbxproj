@@ -10,8 +10,6 @@
 		00110A7F2207BE9C00976B18 /* Float32MultiArrayMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */; };
 		0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B55F220780FE00A3DE94 /* ImageMessage.swift */; };
 		0045B5622207811900A3DE94 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5612207811900A3DE94 /* art.scnassets */; };
-		0045B5642207847600A3DE94 /* go_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5632207847600A3DE94 /* go_large.png */; };
-		0045B5662207857C00A3DE94 /* TestValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B5652207857C00A3DE94 /* TestValues.swift */; };
 		00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB964220672BC0028CD3D /* RBSMessage.swift */; };
 		00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */; };
 		00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB967220672BC0028CD3D /* PoseMessage.swift */; };
@@ -49,8 +47,6 @@
 		00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float32MultiArrayMessage.swift; sourceTree = "<group>"; };
 		0045B55F220780FE00A3DE94 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		0045B5612207811900A3DE94 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		0045B5632207847600A3DE94 /* go_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_large.png; sourceTree = "<group>"; };
-		0045B5652207857C00A3DE94 /* TestValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestValues.swift; sourceTree = "<group>"; };
 		00AFB964220672BC0028CD3D /* RBSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessage.swift; sourceTree = "<group>"; };
 		00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportAbsoluteMessage.swift; sourceTree = "<group>"; };
 		00AFB967220672BC0028CD3D /* PoseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseMessage.swift; sourceTree = "<group>"; };
@@ -190,6 +186,16 @@
 			path = StdSrvs;
 			sourceTree = "<group>";
 		};
+		00E4B5122207DD2000C522FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00C30A0822067659008BEAC0 /* Assets1.xcassets */,
+				00F7657E2206724D002B5485 /* LaunchScreen.storyboard */,
+				00F765812206724D002B5485 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		00F765692206724D002B5485 = {
 			isa = PBXGroup;
 			children = (
@@ -215,12 +221,8 @@
 				00AFB961220672BC0028CD3D /* RBSManager */,
 				00F765752206724D002B5485 /* AppDelegate.swift */,
 				00F765772206724D002B5485 /* ViewController.swift */,
-				0045B5652207857C00A3DE94 /* TestValues.swift */,
-				00C30A0822067659008BEAC0 /* Assets1.xcassets */,
-				0045B5632207847600A3DE94 /* go_large.png */,
 				00F765792206724D002B5485 /* Main.storyboard */,
-				00F7657E2206724D002B5485 /* LaunchScreen.storyboard */,
-				00F765812206724D002B5485 /* Info.plist */,
+				00E4B5122207DD2000C522FF /* Supporting Files */,
 			);
 			path = "Self-Driving Car User Client";
 			sourceTree = "<group>";
@@ -304,7 +306,6 @@
 			files = (
 				00F765802206724D002B5485 /* LaunchScreen.storyboard in Resources */,
 				0045B5622207811900A3DE94 /* art.scnassets in Resources */,
-				0045B5642207847600A3DE94 /* go_large.png in Resources */,
 				00C30A0922067659008BEAC0 /* Assets1.xcassets in Resources */,
 				00F7657B2206724D002B5485 /* Main.storyboard in Resources */,
 			);
@@ -365,7 +366,6 @@
 				00AFB98F220672BD0028CD3D /* Float32Message.swift in Sources */,
 				00AFB991220672BD0028CD3D /* Int32Message.swift in Sources */,
 				00AFB994220672BD0028CD3D /* Vector3Message.swift in Sources */,
-				0045B5662207857C00A3DE94 /* TestValues.swift in Sources */,
 				00AFB995220672BD0028CD3D /* TwistMessage.swift in Sources */,
 				00F765782206724D002B5485 /* ViewController.swift in Sources */,
 				00AFB988220672BD0028CD3D /* HeaderMessage.swift in Sources */,
@@ -536,7 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC4C987ET6;
-				INFOPLIST_FILE = "Self-Driving Car User Client/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Self-Driving Car User Client/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,7 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC4C987ET6;
-				INFOPLIST_FILE = "Self-Driving Car User Client/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Self-Driving Car User Client/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

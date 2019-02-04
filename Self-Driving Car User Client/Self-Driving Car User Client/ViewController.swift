@@ -12,17 +12,22 @@ import SceneKit
 
 class ViewController: UIViewController, RBSManagerDelegate {
 
+    // UI Elements
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var goButton: UIButton!
     
+    // ROS
     var rosManager: RBSManager?
     var steeringPathSub: RBSSubscriber?
     var steeringAngleSub: RBSSubscriber?
+    var initPublisher: RBSPublisher?
     
     var lastPathY = [Float]()
     var lastPathX = [Float]()
     var lastSteerAngle: Float32Message!
+    var vehicleInit = false;
     
     // user settings
     var socketHost: String?
@@ -52,6 +57,8 @@ class ViewController: UIViewController, RBSManagerDelegate {
         rosManager = RBSManager.sharedManager()
         rosManager?.delegate = self
         
+        initPublisher = rosManager?.addPublisher(topic: "/go", messageType: "std_msgs/Bool", messageClass: BoolMessage.self)
+        
         // Declare all subscribers
         steeringPathSub = rosManager?.addSubscriber(topic: "/visual/ios/steering/path", messageClass: Float32MultiArrayMessage.self, response: { (message) -> (Void) in
             self.lastPathX = Array((message as! Float32MultiArrayMessage).data[0..<101])
@@ -68,14 +75,27 @@ class ViewController: UIViewController, RBSManagerDelegate {
         
         steeringAngleSub?.messageType = "std_msgs/Float32"
         steeringPathSub?.messageType = "std_msgs/Float32MultiArray"
-        
     }
-    
     
     func updateWithMessageAngle(_ message: Float32Message) {
         
     }
     
+    // MARK: IBAction
+    
+    @IBAction func goAction(_ sender: Any) {
+        
+        let message = BoolMessage()
+        message.data = !self.vehicleInit
+        self.vehicleInit = !self.vehicleInit
+        if self.vehicleInit {
+            self.goButton.setImage(UIImage(named: "stop_sign"), for: UIControl.State.normal)
+        }else{
+            self.goButton.setImage(UIImage(named: "go_sign"), for: UIControl.State.normal)
+        }
+        self.initPublisher?.publish(message)
+        
+    }
     @IBAction func connectAction(_ sender: Any) {
         if rosManager?.connected == true {
             rosManager?.disconnect()
@@ -89,21 +109,11 @@ class ViewController: UIViewController, RBSManagerDelegate {
             }
         }
     }
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
     
     // MARK: ROS Delegate
     
     func managerDidConnect(_ manager: RBSManager) {
+        self.statusLabel.text = "Status: Connected"
         self.connectButton.backgroundColor = UIColor.red
         self.connectButton.setTitle("Disconnect", for: UIControl.State.normal)
         print("connection established")
@@ -114,6 +124,7 @@ class ViewController: UIViewController, RBSManagerDelegate {
     }
     
     func manager(_ manager: RBSManager, didDisconnect error: Error?) {
+        self.statusLabel.text = "Status: Disconnected"
         self.connectButton.backgroundColor = UIColor.green
         self.connectButton.setTitle("Connect", for: UIControl.State.normal)
         print("connection established")
@@ -135,6 +146,18 @@ class ViewController: UIViewController, RBSManagerDelegate {
             path.name = String(i)
             path.position = SCNVector3Make(Float(-y[i] * 10), 0, Float(-x[i] * 5.0))
             self.sceneView.scene?.rootNode.addChildNode(path)
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
         }
     }
     
