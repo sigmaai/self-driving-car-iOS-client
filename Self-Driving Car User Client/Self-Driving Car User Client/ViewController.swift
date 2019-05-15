@@ -17,6 +17,7 @@ class ViewController: UIViewController, RBSManagerDelegate {
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var goButton: UIButton!
+    var inputTextField: UITextField!
     
     // ROS
     var rosManager: RBSManager?
@@ -33,7 +34,10 @@ class ViewController: UIViewController, RBSManagerDelegate {
     var socketHost: String?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        self.connectButton.backgroundColor = UIColor.init(red: 96.0 / 255.0, green: 177.0 / 255.0, blue: 87.0 / 255.0, alpha: 1.0)
         
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/scene.scn")!
@@ -51,9 +55,8 @@ class ViewController: UIViewController, RBSManagerDelegate {
         self.sceneView.scene = scene
         self.sceneView.showsStatistics = true
         
-        // RBS Manager
-        // socketHost = "192.168.31.150:9090"
-        socketHost = "10.0.0.169:9090"
+        // RBS Manager "192.168.42.109:9090"
+        socketHost = UserDefaults.standard.object(forKey: "connectionIP") as? String
         rosManager = RBSManager.sharedManager()
         rosManager?.delegate = self
         
@@ -83,6 +86,10 @@ class ViewController: UIViewController, RBSManagerDelegate {
     
     // MARK: IBAction
     
+    @IBAction func emergency(_ sender: Any) {
+        
+    }
+    
     @IBAction func goAction(_ sender: Any) {
         
         let message = BoolMessage()
@@ -94,9 +101,12 @@ class ViewController: UIViewController, RBSManagerDelegate {
             self.goButton.setImage(UIImage(named: "go_sign"), for: UIControl.State.normal)
         }
         self.initPublisher?.publish(message)
-        
     }
+    
     @IBAction func connectAction(_ sender: Any) {
+        
+        socketHost = UserDefaults.standard.object(forKey: "connectionIP") as? String
+
         if rosManager?.connected == true {
             rosManager?.disconnect()
         } else {
@@ -104,9 +114,32 @@ class ViewController: UIViewController, RBSManagerDelegate {
                 // the manager will produce a delegate error if the socket host is invalid
                 rosManager?.connect(address: socketHost!)
             } else {
-                // print log error
                 print("Missing socket host value --> use host button")
             }
+        }
+    }
+    
+    @IBAction func setPreference(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Set IP Address", message: "Please set the IP address of the connection", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addTextField(configurationHandler: configurationTextField)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:{ (UIAlertAction)in
+            print("Set new IP address: " + self.inputTextField.text!)
+            UserDefaults.standard.set(self.inputTextField.text!, forKey: "connectionIP")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func configurationTextField(textField: UITextField!){
+        
+        print("configurat hire the TextField")
+        
+        if textField != nil {
+            self.inputTextField = textField!        //Save reference to the UITextField
+            self.inputTextField.text = UserDefaults.standard.object(forKey: "connectionIP") as? String
         }
     }
     
@@ -116,7 +149,7 @@ class ViewController: UIViewController, RBSManagerDelegate {
         self.statusLabel.text = "Status: Connected"
         self.connectButton.backgroundColor = UIColor.red
         self.connectButton.setTitle("Disconnect", for: UIControl.State.normal)
-        print("connection established")
+        print("[STATUS]: connected")
     }
     
     func manager(_ manager: RBSManager, threwError error: Error) {
@@ -125,9 +158,9 @@ class ViewController: UIViewController, RBSManagerDelegate {
     
     func manager(_ manager: RBSManager, didDisconnect error: Error?) {
         self.statusLabel.text = "Status: Disconnected"
-        self.connectButton.backgroundColor = UIColor.green
+        self.connectButton.backgroundColor = UIColor.init(red: 96.0 / 255.0, green: 179.0 / 255.0, blue: 87.0 / 255.0, alpha: 1.0)
         self.connectButton.setTitle("Connect", for: UIControl.State.normal)
-        print("connection established")
+        print("[STATUS]: disconnected")
         print(error?.localizedDescription ?? "connection did disconnect")
     }
     

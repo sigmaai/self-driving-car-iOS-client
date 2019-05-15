@@ -10,6 +10,8 @@
 		00110A7F2207BE9C00976B18 /* Float32MultiArrayMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */; };
 		0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045B55F220780FE00A3DE94 /* ImageMessage.swift */; };
 		0045B5622207811900A3DE94 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5612207811900A3DE94 /* art.scnassets */; };
+		00704446228C71170011765D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00704445228C71170011765D /* MapViewController.swift */; };
+		00704448228C712F0011765D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00704447228C712E0011765D /* MapKit.framework */; };
 		00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB964220672BC0028CD3D /* RBSMessage.swift */; };
 		00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */; };
 		00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB967220672BC0028CD3D /* PoseMessage.swift */; };
@@ -47,6 +49,8 @@
 		00110A7E2207BE9C00976B18 /* Float32MultiArrayMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float32MultiArrayMessage.swift; sourceTree = "<group>"; };
 		0045B55F220780FE00A3DE94 /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
 		0045B5612207811900A3DE94 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		00704445228C71170011765D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		00704447228C712E0011765D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		00AFB964220672BC0028CD3D /* RBSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessage.swift; sourceTree = "<group>"; };
 		00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportAbsoluteMessage.swift; sourceTree = "<group>"; };
 		00AFB967220672BC0028CD3D /* PoseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseMessage.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00704448228C712F0011765D /* MapKit.framework in Frameworks */,
 				10589FAA05C1BFA2DC36F824 /* Pods_Self_Driving_Car_User_Client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +226,7 @@
 				00AFB961220672BC0028CD3D /* RBSManager */,
 				00F765752206724D002B5485 /* AppDelegate.swift */,
 				00F765772206724D002B5485 /* ViewController.swift */,
+				00704445228C71170011765D /* MapViewController.swift */,
 				00F765792206724D002B5485 /* Main.storyboard */,
 				00E4B5122207DD2000C522FF /* Supporting Files */,
 			);
@@ -239,6 +245,7 @@
 		C0D16957DBFF8C6D35836D1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00704447228C712E0011765D /* MapKit.framework */,
 				B8B23C0CCBE8C2C4453608FC /* Pods_Self_Driving_Car_User_Client.framework */,
 			);
 			name = Frameworks;
@@ -278,6 +285,7 @@
 				TargetAttributes = {
 					00F765712206724D002B5485 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -321,11 +329,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Self-Driving Car User Client/Pods-Self-Driving Car User Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
@@ -372,6 +382,7 @@
 				00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */,
 				00F765762206724D002B5485 /* AppDelegate.swift in Sources */,
 				00110A7F2207BE9C00976B18 /* Float32MultiArrayMessage.swift in Sources */,
+				00704446228C71170011765D /* MapViewController.swift in Sources */,
 				00AFB996220672BD0028CD3D /* PointMessage.swift in Sources */,
 				00AFB98E220672BD0028CD3D /* StringMessage.swift in Sources */,
 				00AFB999220672BD0028CD3D /* RBSManager.swift in Sources */,
@@ -544,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Self-Driving-Car-User-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -564,7 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yongyang.Self-Driving-Car-User-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CCDDFA903F8330B7EF0A0E6DADD263D7"
+               BlueprintIdentifier = "E96203F8878ABCB14F13547EE17D7FA4"
                BuildableName = "Pods_Self_Driving_Car_User_Client.framework"
                BlueprintName = "Pods-Self-Driving Car User Client"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CCDDFA903F8330B7EF0A0E6DADD263D7"
+            BlueprintIdentifier = "E96203F8878ABCB14F13547EE17D7FA4"
             BuildableName = "Pods_Self_Driving_Car_User_Client.framework"
             BlueprintName = "Pods-Self-Driving Car User Client"
             ReferencedContainer = "container:Pods.xcodeproj">

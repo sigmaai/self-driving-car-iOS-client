@@ -1,20 +1,24 @@
 PODS:
+  - LGButton (1.1.6)
   - ObjectMapper (3.4.2)
-  - Starscream (3.0.6)
+  - Starscream (3.1.0)
 
 DEPENDENCIES:
+  - LGButton
   - ObjectMapper
   - Starscream
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - LGButton
     - ObjectMapper
     - Starscream
 
 SPEC CHECKSUMS:
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: a6cd7e826b42f697f92cb1ca35344eadf9b2d57c
+PODFILE CHECKSUM: ebe763f036529ae3153e15e9b98db2eb437e2687
 
 COCOAPODS: 1.5.3

@@ -9,14 +9,5 @@ target 'Self-Driving-Car Developer Client' do
 # pod 'RBSManager'
 pod 'Starscream'
 pod 'ObjectMapper'
-  target 'Self-Driving-Car Developer ClientTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Self-Driving-Car Developer ClientUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end

@@ -1,6 +1,6 @@
 PODS:
   - ObjectMapper (3.4.2)
-  - Starscream (3.0.6)
+  - Starscream (3.1.0)
 
 DEPENDENCIES:
   - ObjectMapper
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
-  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 663a38bf22fedf6c8a036a2f08d11f7d37cb51f2
+PODFILE CHECKSUM: 135dd6353046ab7bfbc22b3108c639a10fcaa549
 
 COCOAPODS: 1.5.3
