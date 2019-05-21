@@ -201,7 +201,7 @@ public class RBSManager: NSObject, WebSocketDelegate {
                             subscriber.callback(message)
                         }
                     } else {
-                        let error = createError("unable to generate object of type \(messageType.description)", code: RBSManagerError.JSONDeserializerError.rawValue)
+                        let error = createError("unable to generate object of type \(String(describing: messageType.description))", code: RBSManagerError.JSONDeserializerError.rawValue)
                         DispatchQueue.main.async {
                             self.delegate?.manager(self, threwError: error)
                         }

@@ -60,7 +60,7 @@ class ViewController: UIViewController, RBSManagerDelegate {
         rosManager = RBSManager.sharedManager()
         rosManager?.delegate = self
         
-        initPublisher = rosManager?.addPublisher(topic: "/go", messageType: "std_msgs/Bool", messageClass: BoolMessage.self)
+        initPublisher = rosManager?.addPublisher(topic: "/vehicle/dbw/go", messageType: "std_msgs/Bool", messageClass: BoolMessage.self)
         
         // Declare all subscribers
         steeringPathSub = rosManager?.addSubscriber(topic: "/visual/ios/steering/path", messageClass: Float32MultiArrayMessage.self, response: { (message) -> (Void) in
@@ -78,6 +78,11 @@ class ViewController: UIViewController, RBSManagerDelegate {
         
         steeringAngleSub?.messageType = "std_msgs/Float32"
         steeringPathSub?.messageType = "std_msgs/Float32MultiArray"
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateViewBasedOnConnection()
     }
     
     func updateWithMessageAngle(_ message: Float32Message) {
@@ -117,6 +122,8 @@ class ViewController: UIViewController, RBSManagerDelegate {
                 print("Missing socket host value --> use host button")
             }
         }
+        
+        updateViewBasedOnConnection()
     }
     
     @IBAction func setPreference(_ sender: Any) {
@@ -140,6 +147,21 @@ class ViewController: UIViewController, RBSManagerDelegate {
         if textField != nil {
             self.inputTextField = textField!        //Save reference to the UITextField
             self.inputTextField.text = UserDefaults.standard.object(forKey: "connectionIP") as? String
+        }
+    }
+    
+    func updateViewBasedOnConnection() {
+        
+        if rosManager?.connected == true {
+            self.statusLabel.text = "Status: Connected"
+            self.connectButton.backgroundColor = UIColor.red
+            self.connectButton.setTitle("Disconnect", for: UIControl.State.normal)
+            print("[STATUS]: connected")
+        }else{
+            self.statusLabel.text = "Status: Disconnected"
+            self.connectButton.backgroundColor = UIColor.init(red: 96.0 / 255.0, green: 179.0 / 255.0, blue: 87.0 / 255.0, alpha: 1.0)
+            self.connectButton.setTitle("Connect", for: UIControl.State.normal)
+            print("[STATUS]: disconnected")
         }
     }
     

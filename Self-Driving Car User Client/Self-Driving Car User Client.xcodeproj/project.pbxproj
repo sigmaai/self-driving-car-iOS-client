@@ -12,6 +12,8 @@
 		0045B5622207811900A3DE94 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0045B5612207811900A3DE94 /* art.scnassets */; };
 		00704446228C71170011765D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00704445228C71170011765D /* MapViewController.swift */; };
 		00704448228C712F0011765D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00704447228C712E0011765D /* MapKit.framework */; };
+		0070444E228CE3400011765D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0070444D228CE33F0011765D /* Default-568h@2x.png */; };
+		00704450228CE3F70011765D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070444F228CE3F70011765D /* CustomTableViewCell.swift */; };
 		00AFB984220672BD0028CD3D /* RBSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB964220672BC0028CD3D /* RBSMessage.swift */; };
 		00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */; };
 		00AFB986220672BD0028CD3D /* PoseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFB967220672BC0028CD3D /* PoseMessage.swift */; };
@@ -51,6 +53,8 @@
 		0045B5612207811900A3DE94 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		00704445228C71170011765D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		00704447228C712E0011765D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0070444D228CE33F0011765D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0070444F228CE3F70011765D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		00AFB964220672BC0028CD3D /* RBSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBSMessage.swift; sourceTree = "<group>"; };
 		00AFB966220672BC0028CD3D /* TeleportAbsoluteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportAbsoluteMessage.swift; sourceTree = "<group>"; };
 		00AFB967220672BC0028CD3D /* PoseMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseMessage.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		00F765692206724D002B5485 = {
 			isa = PBXGroup;
 			children = (
+				0070444D228CE33F0011765D /* Default-568h@2x.png */,
 				00F765742206724D002B5485 /* Self-Driving Car User Client */,
 				00F765732206724D002B5485 /* Products */,
 				211AD8D7460AFA6478603B48 /* Pods */,
@@ -227,6 +232,7 @@
 				00F765752206724D002B5485 /* AppDelegate.swift */,
 				00F765772206724D002B5485 /* ViewController.swift */,
 				00704445228C71170011765D /* MapViewController.swift */,
+				0070444F228CE3F70011765D /* CustomTableViewCell.swift */,
 				00F765792206724D002B5485 /* Main.storyboard */,
 				00E4B5122207DD2000C522FF /* Supporting Files */,
 			);
@@ -315,6 +321,7 @@
 				00F765802206724D002B5485 /* LaunchScreen.storyboard in Resources */,
 				0045B5622207811900A3DE94 /* art.scnassets in Resources */,
 				00C30A0922067659008BEAC0 /* Assets1.xcassets in Resources */,
+				0070444E228CE3400011765D /* Default-568h@2x.png in Resources */,
 				00F7657B2206724D002B5485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +395,7 @@
 				00AFB999220672BD0028CD3D /* RBSManager.swift in Sources */,
 				00AFB99C220672BD0028CD3D /* RBSMessageContainer.swift in Sources */,
 				00AFB99D220672BD0028CD3D /* RBSServiceCall.swift in Sources */,
+				00704450228CE3F70011765D /* CustomTableViewCell.swift in Sources */,
 				0045B560220780FE00A3DE94 /* ImageMessage.swift in Sources */,
 				00AFB990220672BD0028CD3D /* TImeMessage.swift in Sources */,
 				00AFB985220672BD0028CD3D /* TeleportAbsoluteMessage.swift in Sources */,
